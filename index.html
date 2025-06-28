@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydroblade | Web</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blurred-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: blur(12px);
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .content {
+            z-index: 2;
+            color: white;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gradient">Hydroblade</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                    <a href="#empire" class="hover:text-blue-400 transition-colors">Digital Empire</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <img class="blurred-img" src="remote1.jpg" alt="Blurred Background">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="text-center z-10 px-4 max-w-6xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 hero-text">
+                <div class="rotating-text">
+                    <span>Welcome to Hydroblade Web Site</span>
+                </div>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 hero-text" style="animation-delay: 0.2s;">
+                Subscribe my Channel
+            </p>
+            <div class="hero-text" style="animation-delay: 0.4s;">
+                <a href="#about" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Discover My Journey
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 floating">
+            <div class="w-20 h-20 bg-blue-500/20 rounded-full blur-xl"></div>
+        </div>
+        <div class="absolute bottom-32 right-16 floating" style="animation-delay: 1s;">
+            <div class="w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-fade">
+                    <img src="gamer1.webp" 
+                         alt="Professional Tech Influencer" 
+                         class="rounded-2xl shadow-2xl w-full max-w-md mx-auto lg:mx-0">
+                </div>
+                <div class="scroll-fade">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Gamer & Photographer</h2>
+                    <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                        A channel that shows videos of video games and other games & their mods, secret places, and more, like the Minecraft game.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        I do things like covering events, etc. from the photography side.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-4 py-2 bg-blue-600/20 text-blue-300 rounded-full border border-blue-500/30">Gamer</span>
+                        <span class="px-4 py-2 bg-purple-600/20 text-purple-300 rounded-full border border-purple-500/30">Youtuber</span>
+                        <span class="px-4 py-2 bg-green-600/20 text-green-300 rounded-full border border-green-500/30">Photographer</span>
+                        <span class="px-4 py-2 bg-orange-600/20 text-orange-300 rounded-full border border-orange-500/30">Photo Editor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Empire Section -->
+    <section id="empire" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-fade">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Digital Empire</h2>
+                <p class="text-2xl text-gray-300">Over 1,000 Followers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- YouTube -->
+                <div class="social-card rounded-2xl p-8 text-center scroll-fade">
+                    <img src="yt1.jpg" 
+                         alt="YouTube" class="w-16 h-16 mx-auto mb-4 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-2">YouTube</h3>
+                    <p class="text-3xl font-bold text-red-400 mb-2">1,094</p>
+                    <p class="text-gray-400">Subscribers</p>
+                </div>
+                
+    </section>
+
+       <!-- Educational Partnerships -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="scroll-fade">
+                    <h2 class="text-4xl font-bold mb-8 text-gradient">Playing Games</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Hudroblade is currently playing games
+                    </p>
+
+<div class="grid grid-cols-4 gap-4">
+    <div class="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center">
+        <img src="mine1.png" alt="Minecraft Logo" class="w-10 h-10 rounded" />
+    </div>
+</div>
+
+                
+                            <div>
+                                <h3 class="font-semibold">Minecraft</h3>
+                                <p class="text-gray-400">Mojang Studios</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="scroll-fade">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gradient">Let's Connect</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    You can contact us and tell us what videos you want.<br>
+                    We will bring them to you.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVVwwVprRkRggDDzhvJfGbBqfQPkJwqZvspJsTwFQlTSvrmPXQwGhBWBzgLFVkCCHhpL" 
+                       class="flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                         hydrobladecontact@gmail.com
+                    </a>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/channel/UCy94A4voplOrM79kBN2POTQ" class="w-12 h-12 bg-gray-700 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-gradient mb-4">Hydroblade</div>
+                    <p class="text-gray-400 leading-relaxed">
+                        A channel that shows videos of video games and other games & their mods, secret places, and more, like the Minecraft game.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#empire" class="text-gray-400 hover:text-white transition-colors">Digital Empire</a></
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/channel/UCy94A4voplOrM79kBN2POTQ" class="text-gray-400 hover:text-red-500 transition-colors">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>2025 Hydroblade™ | Do not copy, distribute, or reuse any part of this website without permission | Gaming & Photography</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const navMenu = document.querySelector('nav div div:last-child');
+        
+        if (menuButton && navMenu) {
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
